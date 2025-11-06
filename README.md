@@ -1,6 +1,7 @@
 
 
-°1 DESCRIPCION DE LO HECHO
+°1 DESCRIPCION DE LO HECHO 
+
 Este proyecto fue realizado con el objetivo de poner en práctica lo que se a aprendido sobre el diseño y la creación de bases de datos relacionales.
 En este caso usamos dos motores que son: PostgreSQL y MySQL, para entender mejor cómo funcionan y qué diferencias tienen entre sí.
 Cada base representa un caso distinto:
@@ -11,6 +12,7 @@ Cada base representa un caso diferente:
 - En MySQL se desarrolló una base para la **gestión académica de un colegio**.
 
 °2 OBJETIVO DE LA ACTIVIDAD
+
 Diseñar y construir bases de datos relacionales aplicando buenas prácticas de modelado, uso de claves primarias y foráneas, además de mantener la integridad de los datos y una buena documentación técnica.
 
 °3 BASES DE DATOS 
@@ -28,7 +30,8 @@ Tablas: estudiantes, profesores, materias, notas, grupos
 Cada estudiante pertenece a un grupo.
 Las notas deben estar entre 0 y 5.
 
-°4 Conceptos aplicados
+°4 CONCEPTOS
+
 -Modelo entidad-relación (E-R):Me ayudó a identificar las entidades, relaciones y atributos antes de crear las tablas.
 -Normalización:Apliqué la normalización hasta la tercera forma normal (3FN) para evitar datos repetidos y mantener el orden.
 -Claves primarias y foráneas:Las utilicé para conectar las tablas correctamente y garantizar la integridad de los datos.
