@@ -1,102 +1,41 @@
-# 🗃️ Proyecto de Bases de Datos Relacionales — PostgreSQL y MySQL
 
-## 📖 Descripción del proyecto
-Este proyecto fue realizado con el propósito de aplicar los conocimientos aprendidos sobre el diseño y la creación de bases de datos relacionales.  
-Se desarrollaron **dos bases de datos** diferentes: una en **PostgreSQL** y otra en **MySQL**, con el fin de practicar el uso de ambos motores y entender sus diferencias.
 
+°1 DESCRIPCION DE LO HECHO
+Este proyecto fue realizado con el objetivo de poner en práctica lo que se a aprendido sobre el diseño y la creación de bases de datos relacionales.
+En este caso usamos dos motores que son: PostgreSQL y MySQL, para entender mejor cómo funcionan y qué diferencias tienen entre sí.
+Cada base representa un caso distinto:
+-En PostgreSQL hice una base de datos para una librería.
+-En MySQL creé una base de datos para la gestión académica de un colegio.
 Cada base representa un caso diferente:
 - En PostgreSQL se trabajó una base para una **librería**.  
 - En MySQL se desarrolló una base para la **gestión académica de un colegio**.
 
----
+°2 OBJETIVO DE LA ACTIVIDAD
+Diseñar y construir bases de datos relacionales aplicando buenas prácticas de modelado, uso de claves primarias y foráneas, además de mantener la integridad de los datos y una buena documentación técnica.
 
-## 🎯 Objetivo general
-Diseñar y construir bases de datos relacionales aplicando buenas prácticas de modelado, uso de claves, integridad referencial y documentación técnica.
+°3 BASES DE DATOS 
 
----
+-Base de datos (PostgreSQL — Librería)
 
-## 🧩 Bases de datos creadas
+Esta base de datos fue creada para manejar la información de autores, libros, clientes y ventas, simulando el funcionamiento de una librería real.
+Tablas: autores, libros, clientes, ventas, detalle_ventas
+El valor total se calcula con base en los detalles de la venta.
 
-### 🔹 Base de datos 1: PostgreSQL — *Librería*
-Esta base permite administrar la información de los **autores, libros, clientes y ventas**.  
-Fue creada para simular el funcionamiento de una librería real.
 
-**Características principales:**
-- Motor: PostgreSQL  
-- Tablas: `autores`, `libros`, `clientes`, `ventas`, `detalle_ventas`
-- Reglas de negocio:
-  - No se pueden registrar ventas sin cliente.
-  - El valor total se calcula según los detalles de la venta.
-  - No se pueden registrar libros sin autor.
+-Base de datos (MySQL — Gestión Académica)
+Esta base fue hecha para administrar los estudiantes, profesores, materias, notas y grupos de un colegio.
+Tablas: estudiantes, profesores, materias, notas, grupos
+Cada estudiante pertenece a un grupo.
+Las notas deben estar entre 0 y 5.
 
----
+°4 Conceptos aplicados
+-Modelo entidad-relación (E-R):Me ayudó a identificar las entidades, relaciones y atributos antes de crear las tablas.
+-Normalización:Apliqué la normalización hasta la tercera forma normal (3FN) para evitar datos repetidos y mantener el orden.
+-Claves primarias y foráneas:Las utilicé para conectar las tablas correctamente y garantizar la integridad de los datos.
+-Restricciones:Implementé reglas como NOT NULL, UNIQUE y CHECK para asegurar que los datos sean válidos antes de guardarse.
+-Scripts DDL y DML:Separé los scripts: los DDL para crear las tablas y los DML para insertar datos de ejemplo.
+-Comparación entre motores:Noté que aunque PostgreSQL y MySQL son parecidos, cambian algunos comandos y tipos de datos.
 
-### 🔹 Base de datos 2: MySQL — *Gestión Académica*
-Esta base sirve para controlar la información de **estudiantes, profesores, materias, notas y grupos** de un colegio.
-
-**Características principales:**
-- Motor: MySQL  
-- Tablas: `estudiantes`, `profesores`, `materias`, `notas`, `grupos`
-- Reglas de negocio:
-  - Cada estudiante pertenece a un grupo.
-  - Cada profesor puede dictar varias materias.
-  - Las notas deben estar entre 0 y 5.
-
----
-
-## ⚙️ Conceptos aplicados
-
-- **Modelo entidad-relación (E-R):**  
-  Se diseñaron los diagramas para identificar las entidades, relaciones y atributos de cada base.
-
-- **Normalización:**  
-  Se aplicaron las reglas de normalización hasta la tercera forma normal (3FN) para evitar datos repetidos y mantener la integridad.
-
-- **Claves primarias y foráneas:**  
-  Se usaron para relacionar las tablas correctamente y asegurar que los datos estén conectados de manera lógica.
-
-- **Restricciones:**  
-  Se usaron reglas como `NOT NULL`, `UNIQUE` y `CHECK` para validar los datos antes de guardarlos.
-
-- **Scripts DDL y DML:**  
-  Los scripts DDL se usaron para crear las tablas, y los DML para insertar y modificar los datos de ejemplo.
-
-- **Comparación de motores:**  
-  Se observó que aunque ambos motores son similares, cambian algunos comandos y tipos de datos entre PostgreSQL y MySQL.
-
----
-
-## 🧠 Decisiones de diseño
-
-1. Se eligieron dos temas diferentes (librería y colegio) para tener ejemplos variados.  
-2. Los nombres de tablas y campos se escribieron en minúsculas y en singular.  
-3. Se usaron claves foráneas con opciones `ON DELETE CASCADE` para mantener la integridad referencial.  
-4. Se dividieron los scripts en DDL y DML para tener mejor organización.  
-5. Se creó este archivo README para explicar el trabajo de forma clara y sencilla.
-
----
-
-## 📄 Evidencias del proyecto
-
-- **Diagramas E-R:**  
-  - `/diagramas/ER_libreria.png`  
-  - `/diagramas/ER_colegio.png`
-
-- **Scripts SQL:**  
-  - `/scripts/postgresql_ddl.sql`  
-  - `/scripts/postgresql_dml.sql`  
-  - `/scripts/mysql_ddl.sql`  
-  - `/scripts/mysql_dml.sql`
-
----
-
-## 🧾 Instrucciones para ejecutar los scripts
-
-### 🔸 PostgreSQL
-1. Abrir la consola de **psql**.  
-2. Crear la base de datos:
-   ```sql
-   CREATE DATABASE bd_libreria;
 
 
 MYSQL
